@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hg.tmzm.mapper.device.Ttmzm2050A1Mapper">
+
+    <resultMap type="com.hg.tmzm.entity.device.drum.Ttmzm2050A1" id="Ttmzm2050A1Result">
+        <!-- Entity fields -->
+        <result property="seqNo1" column="SEQ_NO1"/>
+        <result property="seqNo" column="SEQ_NO"/>
+        <result property="id" column="ID"/>
+        <result property="rotatingDrumNo" column="ROTATING_DRUM_NO"/>
+        <result property="preRotatingDrumNo" column="PRE_ROTATING_DRUM_NO"/>
+        <result property="rollerNoTr" column="ROLLER_NO_TR"/>
+        <result property="preRollerNoTr" column="PRE_ROLLER_NO_TR"/>
+        <result property="asmatNo" column="ASMAT_NO"/>
+        <result property="asmatName" column="ASMAT_NAME"/>
+        <result property="spec" column="SPEC"/>
+        <result property="typeSpec" column="TYPE_SPEC"/>
+        <result property="branchesNumber" column="BRANCHES_NUMBER"/>
+        <result property="standardNumber" column="STANDARD_NUMBER"/>
+        <result property="totalNumber" column="TOTAL_NUMBER"/>
+        <result property="deviceStatus" column="DEVICE_STATUS"/>
+        <result property="destinationStation" column="DESTINATION_STATION"/>
+        <result property="lastDestinationStation" column="LAST_DESTINATION_STATION"/>
+        <result property="status" column="STATUS"/>
+        <result property="type" column="TYPE"/>
+        <result property="deviceType" column="DEVICE_TYPE"/>
+        <result property="remark" column="REMARK"/>
+        <result property="supplierName" column="SUPPLIER_NAME"/>
+        <result property="itemCode2" column="ITEM_CODE2"/>
+        <result property="asmatType" column="ASMAT_TYPE"/>
+        <result property="asmatTypeDesc" column="ASMAT_TYPE_DESC"/>
+        <result property="originAsmatNo" column="ORIGIN_ASMAT_NO"/>
+        <result property="picNo" column="PIC_NO"/>
+        <result property="texture" column="TEXTURE"/>
+        <result property="brand" column="BRAND"/>
+        <result property="outFactoryId" column="OUT_FACTORY_ID"/>
+        <result property="venderName" column="VENDER_NAME"/>
+        <result property="use" column="USE"/>
+        <result property="qty" column="QTY"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="returnNumber" column="RETURN_NUMBER"/>
+        <result property="configureId" column="CONFIGURE_ID"/>
+        <result property="location" column="LOCATION"/>
+        <result property="deviceFlag" column="DEVICE_FLAG"/>
+        <result property="serialNo" column="SERIAL_NO"/>
+        <result property="planNo" column="PLAN_NO"/>
+        <result property="prePlanNo" column="PRE_PLAN_NO"/>
+        <result property="bearingSmall" column="BEARING_SMALL"/>
+        <result property="bearingBig" column="BEARING_BIG"/>
+        <result property="bearingHousingSmall" column="BEARING_HOUSING_SMALL"/>
+        <result property="bearingHousingBig" column="BEARING_HOUSING_BIG"/>
+        <result property="nominalDia" column="NOMINAL_DIA"/>
+        <result property="nominalDiaLast" column="NOMINAL_DIA_LAST"/>
+        <result property="nominalDiaPre" column="NOMINAL_DIA_PRE"/>
+        <result property="rotatingDrumType" column="ROTATING_DRUM_TYPE"/>
+        <result property="fieldC01" column="FIELD_C01"/>
+        <result property="fieldC02" column="FIELD_C02"/>
+        <result property="fieldC03" column="FIELD_C03"/>
+        <result property="fieldC04" column="FIELD_C04"/>
+        <result property="fieldC05" column="FIELD_C05"/>
+        <result property="fieldC06" column="FIELD_C06"/>
+        <result property="fieldC07" column="FIELD_C07"/>
+        <result property="fieldC08" column="FIELD_C08"/>
+        <result property="fieldC09" column="FIELD_C09"/>
+        <result property="fieldC10" column="FIELD_C10"/>
+        <!-- BaseEntity fields -->
+        <result property="recCreateTime" column="REC_CREATE_TIME"/>
+        <result property="recCreator" column="REC_CREATOR"/>
+        <result property="recReviseTime" column="REC_REVISE_TIME"/>
+        <result property="recRevisor" column="REC_REVISOR"/>
+        <result property="recEraseTime" column="REC_ERASE_TIME"/>
+        <result property="recErasor" column="REC_ERASOR"/>
+        <result property="archiveFlag" column="ARCHIVE_FLAG"/>
+        <result property="archiveStampNo" column="ARCHIVE_STAMP_NO"/>
+        <result property="companyCode" column="COMPANY_CODE"/>
+        <result property="companyName" column="COMPANY_NAME"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="Ttmzm2050A1Result">
+        SELECT * FROM TTMZM2050A1
+    </select>
+
+    <select id="selectById" parameterType="String" resultMap="Ttmzm2050A1Result">
+        SELECT * FROM TTMZM2050A1 WHERE ID = #{id}
+    </select>
+
+</mapper>

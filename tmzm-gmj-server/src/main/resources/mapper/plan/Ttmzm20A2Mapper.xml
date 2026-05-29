@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hg.tmzm.mapper.plan.Ttmzm20A2Mapper">
+
+    <resultMap type="com.hg.tmzm.entity.plan.Ttmzm20A2" id="Ttmzm20A2Result">
+        <result property="planNo" column="PLAN_NO"/>
+        <result property="orderNo" column="ORDER_NO"/>
+        <result property="startProdTime" column="START_PROD_TIME"/>
+        <result property="recId" column="REC_ID"/>
+        <result property="sizingElongSize" column="SIZING_ELONG_SIZE"/>
+        <result property="grooveSize" column="GROOVE_SIZE"/>
+        <result property="prodMidCname" column="PROD_MID_CNAME"/>
+        <result property="prodMidCode" column="PROD_MID_CODE"/>
+        <result property="rollDia" column="ROLL_DIA"/>
+        <result property="mandrelDia" column="MANDREL_DIA"/>
+        <result property="mandrilHeadDia" column="MANDRIL_HEAD_DIA"/>
+        <result property="mandrilDia" column="MANDRIL_DIA"/>
+        <result property="seqNo1" column="SEQ_NO1"/>
+        <result property="rollStatus" column="ROLL_STATUS"/>
+        <result property="confirmTime" column="CONFIRM_TIME"/>
+        <result property="specialReq" column="SPECIAL_REQ"/>
+        <result property="deleteFlag" column="DELETE_FLAG"/>
+        <result property="rollPlanRemark" column="ROLL_PLAN_REMARK"/>
+        <result property="fieldC01" column="FIELD_C01"/>
+        <result property="fieldC02" column="FIELD_C02"/>
+        <result property="fieldC03" column="FIELD_C03"/>
+        <result property="fieldC04" column="FIELD_C04"/>
+        <result property="fieldC05" column="FIELD_C05"/>
+        <result property="fieldC06" column="FIELD_C06"/>
+        <result property="fieldC07" column="FIELD_C07"/>
+        <result property="fieldC08" column="FIELD_C08"/>
+        <result property="fieldC09" column="FIELD_C09"/>
+        <result property="fieldC10" column="FIELD_C10"/>
+        <!-- BaseEntity fields -->
+        <result property="recCreateTime" column="REC_CREATE_TIME"/>
+        <result property="recCreator" column="REC_CREATOR"/>
+        <result property="recReviseTime" column="REC_REVISE_TIME"/>
+        <result property="recRevisor" column="REC_REVISOR"/>
+        <result property="recEraseTime" column="REC_ERASE_TIME"/>
+        <result property="recErasor" column="REC_ERASOR"/>
+        <result property="archiveFlag" column="ARCHIVE_FLAG"/>
+        <result property="archiveStampNo" column="ARCHIVE_STAMP_NO"/>
+        <result property="companyCode" column="COMPANY_CODE"/>
+        <result property="companyName" column="COMPANY_NAME"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="Ttmzm20A2Result">
+        SELECT * FROM TTMZM20A2
+    </select>
+
+    <select id="selectById" parameterType="String" resultMap="Ttmzm20A2Result">
+        SELECT * FROM TTMZM20A2 WHERE REC_ID = #{recId}
+    </select>
+
+</mapper>

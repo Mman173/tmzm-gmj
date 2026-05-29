@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hg.tmzm.mapper.plan.Ttmzm20CfgMapper">
+
+    <resultMap type="com.hg.tmzm.entity.plan.Ttmzm20Cfg" id="Ttmzm20CfgResult">
+        <result property="seqNo1" column="SEQ_NO1"/>
+        <result property="seqNo" column="SEQ_NO"/>
+        <result property="id" column="ID"/>
+        <result property="frameType" column="FRAME_TYPE"/>
+        <result property="standNo" column="STAND_NO"/>
+        <result property="asmatNo" column="ASMAT_NO"/>
+        <result property="asmatName" column="ASMAT_NAME"/>
+        <result property="procGrooveFormNo" column="PROC_GROOVE_FORM_NO"/>
+        <result property="rotatingDrumNo" column="ROTATING_DRUM_NO"/>
+        <result property="rotatingDrumType" column="ROTATING_DRUM_TYPE"/>
+        <result property="rollerNoTr" column="ROLLER_NO_TR"/>
+        <result property="branchesNumber" column="BRANCHES_NUMBER"/>
+        <result property="standardNumber" column="STANDARD_NUMBER"/>
+        <result property="totalNumber" column="TOTAL_NUMBER"/>
+        <result property="destinationStation" column="DESTINATION_STATION"/>
+        <result property="deviceType" column="DEVICE_TYPE"/>
+        <result property="deviceStatus" column="DEVICE_STATUS"/>
+        <result property="status" column="STATUS"/>
+        <result property="type" column="TYPE"/>
+        <result property="remark" column="REMARK"/>
+        <result property="supplierName" column="SUPPLIER_NAME"/>
+        <result property="offlineTime" column="OFFLINE_TIME"/>
+        <result property="onlineTime" column="ONLINE_TIME"/>
+        <result property="fieldC01" column="FIELD_C01"/>
+        <result property="fieldC02" column="FIELD_C02"/>
+        <result property="fieldC03" column="FIELD_C03"/>
+        <result property="fieldC04" column="FIELD_C04"/>
+        <result property="fieldC05" column="FIELD_C05"/>
+        <result property="fieldC06" column="FIELD_C06"/>
+        <result property="fieldC07" column="FIELD_C07"/>
+        <result property="fieldC08" column="FIELD_C08"/>
+        <result property="fieldC09" column="FIELD_C09"/>
+        <result property="fieldC10" column="FIELD_C10"/>
+        <!-- BaseEntity fields -->
+        <result property="recCreateTime" column="REC_CREATE_TIME"/>
+        <result property="recCreator" column="REC_CREATOR"/>
+        <result property="recReviseTime" column="REC_REVISE_TIME"/>
+        <result property="recRevisor" column="REC_REVISOR"/>
+        <result property="recEraseTime" column="REC_ERASE_TIME"/>
+        <result property="recErasor" column="REC_ERASOR"/>
+        <result property="archiveFlag" column="ARCHIVE_FLAG"/>
+        <result property="archiveStampNo" column="ARCHIVE_STAMP_NO"/>
+        <result property="companyCode" column="COMPANY_CODE"/>
+        <result property="companyName" column="COMPANY_NAME"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="Ttmzm20CfgResult">
+        SELECT * FROM TTMZM20CFG
+    </select>
+
+    <select id="selectById" parameterType="String" resultMap="Ttmzm20CfgResult">
+        SELECT * FROM TTMZM20CFG WHERE SEQ_NO1 = #{seqNo1}
+    </select>
+
+</mapper>
