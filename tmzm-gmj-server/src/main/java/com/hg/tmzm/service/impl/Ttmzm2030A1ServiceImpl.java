@@ -10,7 +10,7 @@ import com.hg.tmzm.service.device.ITtmzm2030A1Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * 定脱管机架主信息Service实现
@@ -80,7 +80,7 @@ public class Ttmzm2030A1ServiceImpl extends BaseServiceImpl<Ttmzm2030A1Mapper, T
         record.setId(id);
         record.setDestinationStation("04");
         record.setRecRevisor(operator);
-        record.setRecReviseTime(new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        record.setRecReviseTime(LocalDateTime.now());
         return ttmzm2030A1Mapper.updateById(record);
     }
 
@@ -93,7 +93,7 @@ public class Ttmzm2030A1ServiceImpl extends BaseServiceImpl<Ttmzm2030A1Mapper, T
         record.setId(id);
         record.setDestinationStation(destination);
         record.setRecRevisor(operator);
-        record.setRecReviseTime(new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        record.setRecReviseTime(LocalDateTime.now());
         return ttmzm2030A1Mapper.updateById(record);
     }
 }

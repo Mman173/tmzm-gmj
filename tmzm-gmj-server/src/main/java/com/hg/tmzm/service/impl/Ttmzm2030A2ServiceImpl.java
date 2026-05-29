@@ -60,8 +60,8 @@ public class Ttmzm2030A2ServiceImpl extends BaseServiceImpl<Ttmzm2030A2Mapper, T
     public int clearMaterial(String standNo, String serialNo) {
         Ttmzm2030A2 record = new Ttmzm2030A2();
         // 清空物料相关字段
-        record.setMaterialNo(null);
-        record.setMaterialName(null);
+        record.setAsmatNo(null);
+        record.setAsmatName(null);
 
         LambdaQueryWrapper<Ttmzm2030A2> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(Ttmzm2030A2::getStandNo, standNo)

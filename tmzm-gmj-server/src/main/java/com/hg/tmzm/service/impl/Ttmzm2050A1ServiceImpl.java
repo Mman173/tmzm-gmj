@@ -10,7 +10,7 @@ import com.hg.tmzm.service.device.ITtmzm2050A1Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
  * 转鼓主信息Service实现
@@ -69,7 +69,7 @@ public class Ttmzm2050A1ServiceImpl extends BaseServiceImpl<Ttmzm2050A1Mapper, T
         record.setId(id);
         record.setDeviceStatus("2"); // 报废状态
         record.setRecRevisor(operator);
-        record.setRecReviseTime(new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        record.setRecReviseTime(LocalDateTime.now());
         return ttmzm2050A1Mapper.updateById(record);
     }
 
@@ -82,7 +82,7 @@ public class Ttmzm2050A1ServiceImpl extends BaseServiceImpl<Ttmzm2050A1Mapper, T
         record.setId(id);
         record.setDeviceStatus("1");
         record.setRecRevisor(operator);
-        record.setRecReviseTime(new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        record.setRecReviseTime(LocalDateTime.now());
         return ttmzm2050A1Mapper.updateById(record);
     }
 
@@ -96,7 +96,7 @@ public class Ttmzm2050A1ServiceImpl extends BaseServiceImpl<Ttmzm2050A1Mapper, T
         record.setDeviceStatus("0");
         record.setDestinationStation("assembly"); // 装配工位
         record.setRecRevisor(operator);
-        record.setRecReviseTime(new java.text.SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        record.setRecReviseTime(LocalDateTime.now());
         return ttmzm2050A1Mapper.updateById(record);
     }
 }

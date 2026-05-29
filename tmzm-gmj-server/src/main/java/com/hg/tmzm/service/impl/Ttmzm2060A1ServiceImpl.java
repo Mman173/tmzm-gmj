@@ -10,7 +10,6 @@ import com.hg.tmzm.service.device.ITtmzm2060A1Service;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Service
 public class Ttmzm2060A1ServiceImpl extends BaseServiceImpl<Ttmzm2060A1Mapper, Ttmzm2060A1> implements ITtmzm2060A1Service {
@@ -39,7 +38,7 @@ public class Ttmzm2060A1ServiceImpl extends BaseServiceImpl<Ttmzm2060A1Mapper, T
         record.setDestinationStation(DestinationConstants.SCRAP);
         record.setDeviceStatus("0");
         record.setRecRevisor(operator);
-        record.setRecReviseTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
+        record.setRecReviseTime(LocalDateTime.now());
         return updateById(record) ? 1 : 0;
     }
 
@@ -50,7 +49,7 @@ public class Ttmzm2060A1ServiceImpl extends BaseServiceImpl<Ttmzm2060A1Mapper, T
         record.setDeviceStatus("0");
         record.setDestinationStation(DestinationConstants.ASSEMBLY);
         record.setRecRevisor(operator);
-        record.setRecReviseTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
+        record.setRecReviseTime(LocalDateTime.now());
         return updateById(record) ? 1 : 0;
     }
 }

@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 /**
  * 定脱管机架装配信息 Controller
  */
@@ -32,8 +30,8 @@ public class Ttmzm2031Controller extends BaseController {
     @Parameter(name = "standNo", description = "机架号", required = true, in = ParameterIn.PATH)
     @GetMapping("/{standNo}")
     public AjaxResult getInfo(@PathVariable String standNo) {
-        List<Ttmzm2031> list = ttmzm2031Service.queryByStandNo(standNo);
-        return success(list);
+        Ttmzm2031 ttmzm2031 = ttmzm2031Service.queryByStandNo(standNo);
+        return success(ttmzm2031);
     }
 
     /**

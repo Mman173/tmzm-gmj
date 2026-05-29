@@ -7,7 +7,7 @@ import com.hg.tmzm.service.device.ITtmzm2032Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -46,9 +46,9 @@ public class Ttmzm2032ServiceImpl extends BaseServiceImpl<Ttmzm2032Mapper, Ttmzm
     public int confirmProcessing(String id, String operator) {
         Ttmzm2032 record = new Ttmzm2032();
         record.setId(id);
-        record.setConfirmBy(operator);
-        record.setConfirmTime(new Date());
-        // 根据业务需求设置加工完成状态
+        record.setOkFlag("Y");
+        record.setRecRevisor(operator);
+        record.setRecReviseTime(LocalDateTime.now());
         return ttmzm2032Mapper.updateById(record);
     }
 }
