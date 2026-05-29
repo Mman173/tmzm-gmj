@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="前后端同时启动" type="CompoundRunConfigurationType">
+    <toRun name="后端启动" type="SpringBootApplicationConfigurationType" />
+    <toRun name="前端启动" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>
